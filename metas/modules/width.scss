@@ -1,0 +1,11 @@
+@for $num from 1 through 100 {
+	.w_#{$num} {
+        width: #{$num}px;
+    }
+    // .w_#{$temp} {
+    //     width: #{$temp};
+    // }
+    .w_#{$num}vw {
+        width: #{$num}vw;
+    }
+}
