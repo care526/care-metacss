@@ -1,5 +1,19 @@
 # 原子类文档
 
+## 整体的设计规范
+属性-方向_值  
+```css
+/* mg-top_20 */
+{
+  margin-top: 20px;
+}
+/* row-v_c */
+{
+  display: flex;
+  item-align: center;
+}
+```
+
 ## 项目结构  
 - index
 - vars

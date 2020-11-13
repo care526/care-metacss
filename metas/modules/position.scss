@@ -8,4 +8,18 @@
     &_f {
         position: fixed;
     }
+    &_s {
+        position: sticky;
+    }
+}
+
+@for $num from 0 through 100 {
+    @each $key, $value in $abridge {
+        .#{$key}_#{$num} {
+            #{$value}: #{$num}px;
+        }
+    }
+	.fs_#{$num} {
+        font-size: #{$num}px;
+    }
 }
