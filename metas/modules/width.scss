@@ -1,4 +1,4 @@
-@for $num from 1 through 100 {
+@for $num from 0 through 100 {
 	.w_#{$num} {
         width: #{$num}px;
     }

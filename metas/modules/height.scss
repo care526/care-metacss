@@ -1,11 +1,11 @@
-@for $num from 1 through 100 {
-	.w_#{$num} {
+@for $num from 0 through 100 {
+	.h_#{$num} {
         height: #{$num}px;
     }
     // .w_#{$num}% {
     //     height: #{$num}%;
     // }
-    .w_#{$num}vw {
+    .h_#{$num}vw {
         height: #{$num}vw;
     }
 }

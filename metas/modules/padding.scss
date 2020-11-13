@@ -1,9 +1,12 @@
 .pd {
-    @for $num from 1 through 100 {
+    @for $num from 0 through 100 {
         @each $key, $value in $abridge {
             &-#{$key}_#{$num} {
                 padding-#{$value}: #{$num}px;
             }
+        }
+        &_#{$num} {
+            padding: #{$num}px;
         }
         &-v_#{$num} {
             padding-top: #{$num}px;
