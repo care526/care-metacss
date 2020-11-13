@@ -1,15 +1,15 @@
 .mg {
-    @for $num from 1 through 2 {
+    @for $num from 1 through 100 {
         @each $key, $value in $abridge {
             &-#{$key}_#{$num} {
                 margin-#{$value}: #{$num}px;
             }
         }
-        &-v {
+        &-v_#{$num} {
             margin-top: #{$num}px;
             margin-bottom: #{$num}px;
         }
-        &-h {
+        &-h_#{$num} {
             margin-left: #{$num}px;
             margin-right: #{$num}px;
         }
