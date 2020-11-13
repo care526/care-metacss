@@ -1,0 +1,26 @@
+.mg {
+    @for $num from 1 through 2 {
+        @each $key, $value in $abridge {
+            &-#{$key}_#{$num} {
+                margin-#{$value}: #{$num}px;
+            }
+        }
+        &-v {
+            margin-top: #{$num}px;
+            margin-bottom: #{$num}px;
+        }
+        &-h {
+            margin-left: #{$num}px;
+            margin-right: #{$num}px;
+        }
+    }
+    &-v__a {
+        margin: auto 0;
+    }
+    &-h__a {
+        margin: 0 auto;
+    }
+    &__a {
+        margin: auto;
+    }
+}
