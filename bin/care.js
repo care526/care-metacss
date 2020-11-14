@@ -11,8 +11,7 @@ const [command, willPath] = argv.slice(2)
 if (command && willPath) {
     FS.readFile(docsPath, (err, data) => {
         if(err) throw new Error('something wrong was happended');
-        console.log(PATH.resolve(__dirname, '../../', willPath))
-        FS.writeFile(PATH.resolve(__dirname, '../../', willPath), data, err => {
+        FS.writeFile(PATH.resolve(__dirname, '../../../', willPath), data, err => {
             if(err) throw new Error('something wrong was happended');
             console.log('复制成功~')
         })
