@@ -1,6 +1,11 @@
 // 字体大小
-@for $num from 12 through 100 {
+@for $num from 12 through 60 {
 	.fs_#{$num} {
+        font-size: #{$num}px;
+    }
+}
+@each $num in 70, 80, 90, 100, 110, 120 {
+    .fw_#{$num} {
         font-size: #{$num}px;
     }
 }
