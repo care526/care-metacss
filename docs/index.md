@@ -35,7 +35,7 @@ fs_20
 具体的值代表什么还是要看前面的描述是什么  
 1. _s => flex-start
 2. _c => center
-3. _e => end
+3. _e => flex-end
 4. _sb => space-between
 5. _sa => space-around
 
