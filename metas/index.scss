@@ -1,8 +1,3 @@
-// -v  竖向
-// -h  横向
-// _r  对应的值 right
-// _20 对应值 20px 20
-
 // 变量
 @import './vars.scss';
 
@@ -15,3 +10,5 @@
 @import './modules/position.scss';
 @import './modules/width.scss';
 @import './modules/height.scss';
+@import './modules/box.scss';
+@import './modules/other.scss';
