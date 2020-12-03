@@ -5,7 +5,7 @@
     }
 }
 @each $num in 70, 80, 90, 100, 110, 120 {
-    .fw_#{$num} {
+    .fs_#{$num} {
         font-size: #{$num}px;
     }
 }

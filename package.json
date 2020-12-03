@@ -1,6 +1,6 @@
 {
   "name": "care-metacss",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "meta css",
   "main": "index.js",
   "bin": {
