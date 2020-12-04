@@ -16,6 +16,13 @@
   ],
   "author": "care",
   "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/care526/care-metacss.git"
+  },
+  "bugs": {
+    "url": "https://github.com/care526/care-metacss/issues"
+  },
   "devDependencies": {
     "node-sass": "^4.14.1"
   }
