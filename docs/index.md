@@ -1,123 +1,205 @@
-# 原子类文档
+# meta-css文档
+
+## 项目结构
+```js
+metas  
+├── modules  
+│   ├── box.scss  
+│   ├── flex.scss  
+│   ├── float.scss  
+│   ├── font.scss  
+│   ├── height.scss  
+│   ├── margin.scss  
+│   ├── other.scss  
+│   ├── padding.scss  
+│   ├── position.scss  
+│   └── width.scss  
+├── vars.scss  
+└── index.scss  
+```
 
 ## 整体的设计规范
-fw  
-mg-t_20  
-fs_20  
-属性-描述_值  
+属性简写 - 描述 _ 值  
+```css
+fw           font-weight: bold;  
+fs_20        font-size: 20px;  
+mg-t_30      margin-top: 30px; 
+``` 
 描述和值不一定同时存在  
 
-## 项目结构  
-- docs              文档
-- metas             源代码目录
-  - modules         模块
-    - flex          flex
-    - float         浮动
-    - font          文字、排版
-    - margin        margin
-    - padding       padding
-    - position      position
-  - index           主文件
-  - vars            全局变量
+## 一些缩略字母代表的意思
+根据具体适用的css属性参考    
+||||
+| :-: | :-: | :-: |
+| block | inline | inline-block |
+| b | i | ib |
+****
 
-## 一些简化的描述代表什么
-1. -t => top
-2. -b => bottom
-3. -l => left
-4. -r => right
+|||||
+| :-: | :-: | :-: | :-: |
+| top | bottom | left | right |
+| t | b | l | r |  
+****
 
-5. -v => 竖向
-6. -h => 横向
+||||||
+| :-: | :-: | :-: | :-: | :-: |
+| start | center | end | space-between | space-around |
+| s | c | e | sb | sa |  
+****
 
-...
+|||
+| :-: | :-: |
+| 横轴 | 纵轴 |
+| h | v |
+****
 
-## 一些简化的值代表什么
-具体的值代表什么还是要看前面的描述是什么  
-1. _s => flex-start
-2. _c => center
-3. _e => flex-end
-4. _sb => space-between
-5. _sa => space-around
+||
+| :-: |
+| auto |
+| a |
+****
 
-6. _r => relative
-7. _a => absolute
-8. _f => fixed
-9. _s => sticky
-
-...
-
-## 所有简化对应的具体css
+## 当前已经整合的css样式
+### box
+display -> dp  
+```css
+dp_b
+dp_i
+dp_ib
+```
 ### flex
 ```css
-flex1 => flex: 1;
-row => display: flex;
-/* 一行排列 横 纵 对其的方式 */
-row-v_s
-row-v_c
-row-v_e
-row-v_sb
-row-v_sa
-
-row-h_s
-row-h_c
-row-h_e
-row-h_sb
-row-h_sa
-/* 换行 */
-row-wp_w => flex-wrap: wrap;
-row-wp_wr => flex-wrap: wrap-reverse;
+flex1
 ```
-将row替换为column 就是竖轴排列，描述属性同上
+行 row  
+```css
+row-v_s      
+row-h_sb
+row_c_c
+row-wp_w
+row-wp_wr
+```
+列 column  
+
+```css
+column-v_s      
+column-h_sb
+column_c_c
+column-wp_w
+column-wp_wr
+```
+
 ### float
 ```css
-fl => float: left;
-fr => float: right;
+fl
+fr
 ```
 ### font
-- 字体大小
-  ```css
-  fs_20 => font-size: 20px;
-  ```
-- 行高
-  ```css
-  lh_20 => line-height: 20px;
-  ```
-- 字重
-  ```css
-  fw => font-weight: bold;
-  fwer => font-weight: bolder;
-  fw_700 => font-weight: 700;
-  ```
-- 对齐
-  ```css
-  ta_l => text-align: left;
-  ta_c => text-align: center;
-  ta_r => text-align: right;
-  ```
+字体大小  
+fs -> font-size  
+12 ~ 60 和 70 80 90 100 110 120px    
+```css
+fs_12
+```
+行高  
+lh -> line-height  
+12 ~ 100px   
+```css
+lh_22
+```
+字重  
+fw -> font-weight  
+数值类型 100 200 300 400 500 600 700 800 900  
+```css
+fw
+fwer
+fw_100
+```
+排版 - 对齐  
+ta -> text-align  
+```css
+ta_l
+ta_c
+ta_r
+```
+### height
+h -> height  
+0 ~ 100px   
+```css
+h_45
+```
 
-### height width
+### margin
+mg -> margin  
 ```css
-h_1 => height: 1px;
+mg_12
+mg-h_10
+mg-h_a
+mg-v_10
+mg-v_a
+mg-t_30
+mg-b_40
+mg-l_50
+mg-r_60
 ```
-width同height
-### margin padding
+
+### other
+|||
+| :-: | :-: |
+| pointer | not-allowed |
+| p | na |
+****
+手势  
+cs -> cursor
 ```css
-mg-t_1 => margin-top: 1px;
-mg-b_1 => margin-bottom: 1px;
-mg-l_1 => margin-left: 1px;
-mg-r_1 => margin-right: 1px;
-mg-v_a => margin: auto 0;
-mg-h_a => margin: 0 auto;
+cs_p
+cs_na
 ```
-padding同margin  
+
+层级  
+zi -> z-index  
+0 ~ 10
+```css
+zi_4
+```
+
+### padding
+pd -> padding  
+```css
+pd_12
+pd-h_10
+pd-h_a
+pd-v_10
+pd-v_a
+pd-t_30
+pd-b_40
+pd-l_50
+pd-r_60
+```
+
 ### position
+|||||
+| :-: | :-: | :-: | :-: |
+| relative | absolute | fixed | sticky |
+| r | a | f | s |
+****
+pt -> position
 ```css
-pt_r => position: relative;
-pt_a => position: absolute;
-pt_f => position: fixed;
-pt_s => position: sticky;
-t_1 => top: 1px;
-b_1 => bottom: 1px;
-l_1 => left: 1px;
-r_1 => right: 1px;
+pt_r
+pt_a
+pt_f
+pt_s
+```
+0 ~ 100px  
+```css
+t_14
+b_30
+l_50
+r_89
+```
+### width
+w -> width  
+0 ~ 100px   
+```css
+w_45
 ```
